@@ -6,8 +6,8 @@ require_once("LoneTag.php");
 require_once("ContainerFramework.php");
 
 // Probabily not neaded
-//require_once("HeadTag.php");
-
+require_once("HeadTag.php");
+require_once("DivTag.php");
 require_once("HtmlTag.php");
 
 ?>

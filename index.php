@@ -11,10 +11,12 @@ $page->getHead()
 
 
 $page->getBody()
+		->addHtmlObject(new LinkedInAuthManager())
 		->addBruteText('Olá isto é texto limpo, antes do paragrafo')
 		->addLoneTag('p')
 		->addHtmlObject(new LinkedInSignIn())
-		->addBruteText('Olá, isto é texto limpo depois do paragrafo');
+		->addBruteText('Olá, isto é texto limpo depois do paragrafo')
+		->addHtmlObject(new DivTag('id'));
 
 
 ?>
