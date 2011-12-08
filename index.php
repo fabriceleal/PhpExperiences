@@ -2,8 +2,9 @@
 
 require("framework/FrameworkGlue.php");
 require("linkedin/LinkedInGlue.php");
+require("templates.php");
 
-$page = new HtmlFramework();
+$page = new HtmlTag();
 
 $page->getHead()
 		->setTitle('Fab Framework Usage')
@@ -11,11 +12,16 @@ $page->getHead()
 		->addHtmlObject(new LinkedInAuthManager()); //
 
 $page->getBody()
-		->addBruteText('Olá isto é texto limpo, antes do paragrafo')
-		->addLoneTag('p')
+		->addBruteText('Clean text before the line break')
+		->addLoneTag('br')
+		->addBruteText('Clean text after the line break')
+		->addLoneTag('br')->addBruteText('Sign in button:')
 		->addHtmlObject(new LinkedInSignIn())
-		->addBruteText('Olá, isto é texto limpo depois do paragrafo')
-		->addHtmlObject(new DivTag(LinkedInAuthManager::DIV));
+		->addLoneTag('br')->addBruteText('Simple manager:')
+		->addHtmlObject(new DivTag(LinkedInAuthManager::DIV))
+		->addLoneTag('br')->addBruteText('Full profile info:')
+		->addHtmlObject(new HtmlLinkedInProfile());
+
 
 ?>
 <?=$page->getCurrentHtml()?>

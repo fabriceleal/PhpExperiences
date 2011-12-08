@@ -3,7 +3,7 @@
 require_once("HeadTag.php");
 require_once("ContainerFramework.php");
 
-class HtmlFramework extends ContainerFramework{
+class HtmlTag extends ContainerFramework{
 	
 	private $head;
 	private $body;
