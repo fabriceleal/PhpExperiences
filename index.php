@@ -1,7 +1,7 @@
 <?php
 
 require("framework/FrameworkGlue.php");
-
+require("linkedin/LinkedInGlue.php");
 
 $page = new HtmlFramework();
 
