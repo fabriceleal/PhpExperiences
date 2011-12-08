@@ -7,11 +7,11 @@ $page = new HtmlFramework();
 
 $page->getHead()
 		->setTitle('Fab Framework Usage')
-		->addHtmlObject(new LinkedInFramework());
+		->addHtmlObject(new LinkedInAuthManager())
+		->addHtmlObject(new LinkedInFramework(true, LinkedInAuthManager::ONLOAD));
 
 
 $page->getBody()
-		->addHtmlObject(new LinkedInAuthManager())
 		->addBruteText('Olá isto é texto limpo, antes do paragrafo')
 		->addLoneTag('p')
 		->addHtmlObject(new LinkedInSignIn())
