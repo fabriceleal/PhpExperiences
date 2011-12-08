@@ -4,12 +4,12 @@ class LinkedInApi{
 	private static $key;
 		
 	static function getKey(){
-		if(!$this->key){
-			$this->key = parse_ini_file('privateLinkedIn.php')['key'];
+		if(!self::$key){
+			$config = parse_ini_file('privateLinkedIn.php');
+			self::$key = $config['key'];
 		}
-		return $this->key;
+		return self::$key;
 	}
 }
-
 
 ?>

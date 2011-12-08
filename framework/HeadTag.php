@@ -10,6 +10,8 @@ class HeadTag extends ContainerFramework{
 
 	public function setTitle($title){
 		$this->addRetrieveContentTag('title')->addBruteText($title);
+		
+		return $this;
 	}
 }
 
