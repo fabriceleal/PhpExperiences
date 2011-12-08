@@ -17,6 +17,5 @@ $page->getBody()
 		->addBruteText('Olá, isto é texto limpo depois do paragrafo')
 		->addHtmlObject(new DivTag(LinkedInAuthManager::DIV));
 
-
 ?>
 <?=$page->getCurrentHtml()?>

@@ -10,9 +10,9 @@ class LinkedInFramework extends ContainerFramework{
 		$this->addAttribute('type', 'text/javascript');
 		$this->addAttribute('src', 'http://platform.linkedin.com/in.js');
 		$this->addBruteText(
-			"api_key: " . LinkedInApi::getKey() . "\r\n"
-			. ($onload? "onload: " . $onload: "") . "\r\n"
-			. ($authorize? "authorize: true": "")
+			"\r\n"."  api_key: " . LinkedInApi::getKey()
+			. ($onload? "\r\n"."  onLoad: " . $onload: "")
+			. ($authorize? "\r\n"."  authorize: true": "")
 		);
 	}
 
