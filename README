@@ -1,0 +1,8 @@
+# PhpExperiences
+
+Experiences using PHP.
+An atempt at trying to make a framework with the objective of representing HTML using a tree of objects. 
+The framework implements some HTML objects (html, head, body, p, div, ...) and implements a layer over LinkedIn
+Javascript API.
+
+Stalled for now.
